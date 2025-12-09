@@ -5,27 +5,47 @@ body
 .navbar
 {
     position: relative;
+    display: flex;
     width: 1520px;
     height: 50px;
     transition: all 0.9s ease-in-out;
     background-color: rgb(207, 207, 207);
-    box-shadow: 10px 10px 20px;
-    border-radius: 200pc;
+    box-shadow: 0px 10px 20px;
+    align-items: center;    
+    border-radius: 12px;
 }
 
-.navbar-elements
+
+.pos
 {
     position: relative;
-    left: 50px;
-    font-size: xx-large;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    top: -2px;
+    left: 20px;
+    font-size: larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.navbar-elements:hover
+.pos1
 {
     position: relative;
-    left: 50px;
-    font-size: 30px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    top: -2px;
+    left: 70px;
+    font-size: larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.pos2
+{
+    position: relative;
+    left: 130px;
+    font-size: larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.pos3
+{
+    position: relative;
+    left: 180px;
+    font-size: larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.img
+{
+height: 1520px;
 }
