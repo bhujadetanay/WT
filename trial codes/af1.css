@@ -7,7 +7,7 @@
 }
 
 :root {
-    --iaf-blue: #070707; /* Deep Sky Blue */
+    --iaf-blue: #000000; /* Deep Sky Blue */
     --iaf-sky: #87CEEB;   /* Lighter Blue accent */
     --iaf-grey: #f4f4f4;
     --text-dark: #333;
@@ -125,7 +125,7 @@ section {
 }
 
 .bg-light {
-    background-color: #01070e;
+    background-color: #fcfdfe;
 }
 
 /* --- About Section --- */
