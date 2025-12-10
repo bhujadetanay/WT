@@ -1,0 +1,187 @@
+/* --- CSS Reset & Variables --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --iaf-blue: #000000; /* Deep Sky Blue */
+    --iaf-sky: #87CEEB;   /* Lighter Blue accent */
+    --iaf-grey: #f4f4f4;
+    --text-dark: #333;
+    --white: #ffffff;
+    --gold: #FFD700;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--iaf-grey);
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: var(--iaf-blue);
+    color: var(--white);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid var(--gold);
+    display: inline-block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--iaf-sky);
+}
+
+/* --- Hero Section --- */
+/* --- 3. Hero Section --- */
+.hero {
+    /* UPDATED LINE: Background Image changed to Indian Tricolour with a lighter blue overlay */
+    background: linear-gradient(rgba(0, 46, 110, 0.4), rgba(0, 46, 110, 0.4)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw1lYDriwdNY6VGMloaTanb_dF2gLjLEXHfw&s');
+    background-size: cover;
+    background-position: center;
+    height: 85vh; /* 85% of screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--gold);
+}
+
+.btn {
+    display: inline-block;
+    background: var(--iaf-blue);
+    color: var(--white);
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid var(--white);
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: var(--white);
+    color: var(--iaf-blue);
+}
+
+/* --- Sections Common Styles --- */
+section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: var(--iaf-blue);
+}
+
+.bg-light {
+    background-color: #fcfdfe;
+}
+
+/* --- About Section --- */
+.about-content {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-img {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* --- Organization (Commands) --- */
+.commands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.command-card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    border-top: 4px solid var(--iaf-blue);
+}
+
+.special-border {
+    border-top-color: var(--gold);
+}
+
+/* --- Vehicles/Aircraft --- */
+.aircraft-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.aircraft-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0;
