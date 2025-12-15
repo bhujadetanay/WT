@@ -8,10 +8,12 @@
 
     
 
-    .wrapper {
+    .maindiv {
       background: var(--white);
-      border-radius: 24px;
+      border-radius: 45px;
+      box-shadow: 10px 10px 80px rgb(0, 0, 0);
       max-width: 1200px;
+      background: white;
       height: 1600px;
       margin: auto;
       overflow: hidden;
@@ -30,6 +32,21 @@
       gap: 0.6rem;
       font-weight: 700;
       font-size: 1.2rem;
+      background-color: #bebebe;
+      height: 46px;
+      width: 256px;
+      position: relative;
+      opacity: 0.9;
+      box-shadow: 0px 0px 19px rgb(37, 37, 37);
+      left: 420px;
+      transition: all 0.7s;
+      border-radius: 200px;
+    }
+    .logo:hover
+    {
+      box-shadow: 0px 0px 30px #eeff00;
+      height: 50px;
+      width: 260px;
     }
 
     .logo span {
@@ -162,7 +179,7 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #e9ecef;
+      background: linear-gradient(180deg, rgb(245, 150, 7) 0%, rgb(255, 255, 255) 30%, green 40%);
       display: flex;
       justify-content: center;
       align-items: center;
