@@ -6,36 +6,71 @@
 <title>Indian Army | Web Technology Project</title>
 
 <style>
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: "Segoe UI", sans-serif;
-    background: radial-gradient(circle at top, #0b1d13, #050806);
+    background: #050806;
     color: #e5e7eb;
 }
 
-header {
-    padding: 70px 20px;
-    text-align: center;
-    background: linear-gradient(135deg, #002b16, #00140a);
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(2, 20, 11, 0.95);
+    padding: 12px 0;
+    z-index: 1000;
 }
 
-header h1 {
-    font-size: 3.4rem;
-    letter-spacing: 3px;
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #a7f3d0;
+    font-weight: 500;
+}
+
+nav a:hover {
     color: #6ee7b7;
 }
 
+header {
+    padding: 120px 20px 90px;
+    text-align: center;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)),
+        url("https://images.unsplash.com/photo-1628595351029-c2bf17511468?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+}
+
+header h1 {
+    font-size: 3.6rem;
+    letter-spacing: 4px;
+    color: #d1fae5;
+}
+
 header p {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     opacity: 0.9;
 }
 
 .section-title {
     text-align: center;
-    margin-top: 80px;
-    margin-bottom: 30px;
-    color: #86efac;
+    margin: 90px 0 35px;
     font-size: 2rem;
+    color: #86efac;
 }
 
 .container {
@@ -47,16 +82,16 @@ header p {
 }
 
 .card {
-    background: rgba(18, 32, 24, 0.9);
+    background: rgba(18, 32, 24, 0.95);
     border-radius: 16px;
     padding: 18px;
     border: 1px solid rgba(134, 239, 172, 0.25);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 0 18px rgba(134, 239, 172, 0.35);
+    transform: translateY(-5px);
+    box-shadow: 0 0 14px rgba(134,239,172,0.35);
 }
 
 figure {
@@ -68,11 +103,6 @@ figure img {
     height: 190px;
     object-fit: cover;
     border-radius: 12px;
-    transition: transform 0.4s ease;
-}
-
-.card:hover img {
-    transform: scale(1.05);
 }
 
 figcaption {
@@ -92,33 +122,38 @@ figcaption {
     line-height: 1.55;
 }
 
-.media-section {
+.timeline {
     width: 90%;
-    margin: 80px auto;
+    margin: 0 auto 80px auto;
+    display: grid;
+    gap: 25px;
+}
+
+.event {
+    background: rgba(15, 28, 21, 0.95);
+    border-left: 4px solid #6ee7b7;
+    padding: 18px 22px;
+    border-radius: 10px;
+}
+
+.event h3 {
+    margin: 0;
+    color: #d1fae5;
+}
+
+.event span {
+    font-size: 0.85rem;
+    opacity: 0.75;
+}
+
+.audio-section {
     text-align: center;
-}
-
-.media-section h2 {
-    color: #6ee7b7;
-    margin-bottom: 25px;
-}
-
-video {
-    width: 100%;
-    max-width: 760px;
-    border-radius: 14px;
-    box-shadow: 0 0 18px rgba(134,239,172,0.35);
-}
-
-audio {
-    margin-top: 25px;
-    width: 320px;
+    margin-bottom: 80px;
 }
 
 footer {
     text-align: center;
     padding: 25px;
-    margin-top: 70px;
     background: #02140b;
     color: #9ca3af;
     font-size: 0.9rem;
@@ -128,107 +163,187 @@ footer {
 
 <body>
 
+<nav>
+    <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#structure">Structure</a></li>
+        <li><a href="#operations">Operations</a></li>
+        <li><a href="#training">Training</a></li>
+        <li><a href="#humanitarian">Peacekeeping role</a></li>
+        <li><a href="#anthem">Anthem</a></li>
+    </ul>
+</nav>
+
 <header>
     <h1>INDIAN ARMY</h1>
     <p>Service Before Self • Courage • Discipline • Honor</p>
 </header>
 
-<h2 class="section-title">Overview</h2>
+<h2 id="overview" class="section-title">Introduction</h2>
 <div class="container">
     <div class="card">
-        <figure>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Indian_Army_infantry_patrolling.jpg">
-            <figcaption>Infantry Patrol in Operational Area</figcaption>
-        </figure>
-        <h2>Role & Responsibility</h2>
+        <h2>Indian Army</h2>
         <p>
-            The Indian Army is the land-based branch of the Indian Armed Forces.
-            It is responsible for defending the nation against external aggression
-            and maintaining internal security when required.
+            The Indian Army is the land-based branch of the Indian Armed Forces and
+            is one of the largest standing armies in the world. It was formally
+            established after India gained independence in 1947 and operates under
+            the Ministry of Defence.
+        </p>
+        <p>
+            Its primary mission is to ensure national security and defend the
+            sovereignty and territorial integrity of India against external threats
+            and internal challenges.
         </p>
     </div>
 
     <div class="card">
-        <figure>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Indian_Army_Ladakh.jpg">
-            <figcaption>High-Altitude Deployment in Ladakh</figcaption>
-        </figure>
-        <h2>Terrain & Readiness</h2>
+        <h2>Primary Responsibilities</h2>
         <p>
-            From glaciers of Siachen to deserts of Rajasthan and dense jungles,
-            the Indian Army operates across the most diverse terrains in the world.
+            The Indian Army is responsible for conducting land warfare operations,
+            maintaining internal security when required, and assisting civil
+            authorities during natural disasters such as floods, earthquakes,
+            and pandemics.
+        </p>
+        <p>
+            It also plays a vital role in peacekeeping missions under the United
+            Nations, contributing to global stability.
         </p>
     </div>
 </div>
 
-<h2 class="section-title">Structure & Equipment</h2>
+    <div class="card">
+        <figure>
+            <img src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&w=1200&q=80">
+            <figcaption>Border Deployment</figcaption>
+        </figure>
+        <h2>Operational Reach</h2>
+        <p>
+            From glaciers to deserts, the Army operates in some of the most
+            challenging environments on Earth.
+        </p>
+    </div>
+</div>
+
+<h2 id="structure" class="section-title">Organizational Structure</h2>
 <div class="container">
     <div class="card">
-        <figure>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Indian_Army_T-90_Bhishma_tank.jpg">
-            <figcaption>T-90 Bhishma Main Battle Tank</figcaption>
-        </figure>
-        <h2>Armoured Corps</h2>
+        <h2>Command Structure</h2>
         <p>
-            The Armoured Corps forms the backbone of mechanised warfare,
-            equipped with modern tanks capable of high mobility and firepower.
+            The Indian Army is headed by the Chief of the Army Staff (COAS).
+            Operationally, it is divided into several commands such as Northern,
+            Southern, Eastern, Western, Central, and South Western Commands.
+        </p>
+        <p>
+            Each command is responsible for security in a specific geographical
+            region of the country.
         </p>
     </div>
 
     <div class="card">
-        <figure>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Indian_Army_Bofors_Howitzer.jpg">
-            <figcaption>Bofors Artillery System</figcaption>
-        </figure>
-        <h2>Artillery Regiment</h2>
+        <h2>Major Arms & Services</h2>
         <p>
-            Artillery units provide long-range fire support and play a crucial role
-            in both defensive and offensive operations.
+            The Army consists of various arms including Infantry, Armoured Corps,
+            Artillery, Engineers, Signals, Army Aviation, and supporting services
+            such as Medical Corps and Logistics.
         </p>
-    </div>
-
-    <div class="card">
-        <figure>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Indian_Army_Para_SF.jpg">
-            <figcaption>PARA Special Forces</figcaption>
-        </figure>
-        <h2>Special Forces</h2>
         <p>
-            The PARA SF are elite soldiers trained for unconventional warfare,
-            counter-terrorism, reconnaissance, and strategic missions.
+            These units work together to ensure coordinated and effective military
+            operations.
         </p>
     </div>
 </div>
 
-<h2 class="section-title">Major Operations & Contributions</h2>
+<h2 id="operations" class="section-title">Key Missions and Operations</h2>
+<div class="timeline">
+    <div class="event">
+        <h3>Indo-Pak War</h3>
+        <span>1947–1948</span>
+        <p>
+            The first conflict after independence, fought to secure territorial
+            integrity and establish national defense capabilities.
+        </p>
+    </div>
+
+    <div class="event">
+        <h3>Bangladesh Liberation War</h3>
+        <span>1971</span>
+        <p>
+            A decisive military operation that led to the creation of Bangladesh
+            and demonstrated India’s strategic and humanitarian role.
+        </p>
+    </div>
+
+    <div class="event">
+        <h3>Operation Blue Star</h3>
+        <span>1984</span>
+        <p>
+            An internal security operation conducted to restore law and order
+            in Punjab during a period of insurgency.
+        </p>
+    </div>
+
+    <div class="event">
+        <h3>Kargil Conflict</h3>
+        <span>1999</span>
+        <p>
+            A high-altitude conflict where Indian forces successfully reclaimed
+            strategic positions along the Line of Control.
+        </p>
+    </div>
+</div>
+
+<h2 id="training" class="section-title">Training and Discipline</h2>
 <div class="container">
     <div class="card">
-        <h2>Historic Operations</h2>
+        <h2>Military Training</h2>
         <p>
-            The Indian Army has played a decisive role in major conflicts such as
-            the 1947 war, 1971 Bangladesh Liberation War, Kargil conflict,
-            and numerous counter-insurgency operations.
+            Training in the Indian Army is rigorous and continuous. Soldiers are
+            trained in physical endurance, weapon handling, battlefield tactics,
+            leadership, and survival skills.
+        </p>
+        <p>
+            Training institutions such as the Indian Military Academy (IMA),
+            Officers Training Academy (OTA), and various regimental centres
+            prepare personnel for diverse operational roles.
         </p>
     </div>
 
     <div class="card">
-        <h2>United Nations Missions</h2>
+        <h2>Code of Values</h2>
         <p>
-            India is one of the largest contributors to UN peacekeeping missions,
-            with Indian Army personnel serving in conflict zones across the globe.
+            The Indian Army follows a strict code of discipline based on values
+            such as integrity, loyalty, courage, selfless service, and respect
+            for the nation and its citizens.
+        </p>
+        <p>
+            The motto “Service Before Self” reflects the spirit of sacrifice
+            and dedication expected from every soldier.
         </p>
     </div>
 </div>
 
-<div class="media-section">
-    <h2>Operational Footage</h2>
-    <video controls>
-        <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/9/9f/Indian_Army_Exercise.webm/Indian_Army_Exercise.webm.720p.vp9.webm">
-    </video>
+<h2 id="humanitarian" class="section-title">Humanitarian and Peacekeeping Role</h2>
+<div class="container">
+    <div class="card">
+        <h2>Disaster Relief</h2>
+        <p>
+            The Indian Army plays a crucial role during natural disasters by
+            conducting rescue operations, providing medical aid, and restoring
+            essential services.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>UN Peacekeeping</h2>
+        <p>
+            India is among the largest contributors to United Nations peacekeeping
+            forces, with Indian Army personnel deployed in conflict zones worldwide.
+        </p>
+    </div>
 </div>
 
-<div class="media-section">
-    <h2>Indian Army Band (Instrumental)</h2>
+<div id="anthem" class="audio-section">
+    <h2 class="section-title">Indian Army Band</h2>
     <audio controls>
         <source src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Indian_Army_Band.ogg">
     </audio>
