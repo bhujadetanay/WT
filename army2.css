@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-dark: #0a1a2a;
+    --primary-blue: #123a63;
+    --accent-gold: #d4af37;
+    --light-bg: #f4f6f8;
+    --white: #ffffff;
+    --text-dark: #222;
+    --text-light: #eaeaea;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--light-bg);
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+/* Header & Navbar */
+header {
+    background: var(--primary-dark);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo h1 {
+    color: var(--white);
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    border-bottom: 3px solid var(--accent-gold);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent-gold);
+}
+
+/* Hero Section */
+.hero {
+    height: 85vh;
+    background:
+        linear-gradient(rgba(10,26,42,0.65), rgba(10,26,42,0.65)),
+        url("https://images.unsplash.com/photo-1544197150-b99a580bb7a8");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.4rem;
+    color: var(--accent-gold);
+    font-style: italic;
+}
+
+/* Sections */
+section {
+    padding: 70px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.4rem;
+    color: var(--primary-blue);
+    margin-bottom: 40px;
+}
+
+/* About */
+.about-content {
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-img {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Commands */
+.bg-light {
+    background: var(--white);
+}
+
+.commands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+}
+
+.command-card {
+    background: var(--light-bg);
+    padding: 22px;
+    border-radius: 8px;
+    text-align: center;
+    border-top: 4px solid var(--primary-blue);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.special-border {
+    border-top-color: var(--accent-gold);
+}
+
+/* Aircraft */
+.aircraft-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+    gap: 30px;
+}
+
+.aircraft-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.aircraft-card:hover {
+    transform: translateY(-6px);
+}
+
+.aircraft-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.aircraft-info {
+    padding: 18px;
+}
+
+.aircraft-info h3 {
+    color: var(--primary-blue);
+    margin-bottom: 8px;
+}
+
+/* Missions Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+thead {
+    background: var(--primary-blue);
+    color: var(--white);
+}
+
+th, td {
+    padding: 14px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+tbody tr:hover {
+    background: #f0f4f8;
+}
+
+/* Footer */
+footer {
+    background: var(--primary-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 60px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
