@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Pride</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="homee.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+</head>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        console.log('Navigation clicked');
+      });
+    });
+
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', function () {
+        this.style.transform = 'translateY(-10px)';
+      });
+      card.addEventListener('mouseleave', function () {
+        this.style.transform = 'translateY(0)';
+      });
+    });
+
+    console.log('Page loaded successfully');
+  });
+</script>
+
+<body>
+
+  <div class="maindiv">
+
+    <header>
+      <div class="logo">
+        <span class="logos"><img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Armed_forces_logo.svg/2048px-Armed_forces_logo.svg.png"
+            alt="Indian Defence Force Logo" style="width: 45px; height: 45px;"></span> Indian Defence
+        Force
+      </div>
+
+    </header>
+
+    <section class="hero">
+      <div class="heading1"><span></span></div>
+
+      <h1>
+        Sewa Paramo Dharma <br>
+        <span class="highlight"></span>
+      </h1>
+
+      <p>
+        Service before self : The ultimate motto of Indian Defence force
+      </p>
+
+      <section class="defence-box">
+
+        <div class="defence-header">
+          <h1>Indian Defence Forces</h1>
+          <p>
+            The Indian Defence system safeguards the nation through land, sea, air,
+            and intelligence operations. Explore the core pillars that ensure
+            national security and strategic strength.
+          </p>
+        </div>
+
+        <div class="defence-cards">
+
+          <a href="Navy.html" class="card">
+            <div class="card-icon">⚓</div>
+            <h3>Indian Navy</h3>
+            <p>
+              Protects India's maritime borders and secures national interests in
+              the Indian Ocean Region.
+            </p>
+          </a>
+
+          <a href="af1.html" class="card">
+            <div class="card-icon">✈️</div>
+            <h3>Indian Air Force</h3>
+            <p>
+              Controls airspace, delivers rapid response, and provides aerial
+              superiority during conflicts.
+            </p>
+          </a>
+
+          <a href="Indian_Army.html" class="card">
+            <div class="card-icon">🪖</div>
+            <h3>Indian Army</h3>
+            <p>
+              Defends the nation on land, conducts counter-terrorism operations,
+              and ensures border security.
+            </p>
+          </a>
+
+          <a href="intilligence.html" class="card">
+            <div class="card-icon">🕵️‍♂️</div>
+            <h3>Intelligence Agencies</h3>
+            <p>
+              Collects strategic intelligence to prevent threats and protect
+              national interests.
+            </p>
+          </a>
+
+        </div>
+
+      </section>
+    </section>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,258 @@
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    
+
+    .maindiv {
+      background: var(--white);
+      border-radius: 45px;
+      box-shadow: 10px 10px 80px rgb(0, 0, 0);
+      max-width: 1200px;
+      background: white;
+      height: 1600px;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 2.5rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 700;
+      font-size: 1.2rem;
+      background-color: #bebebe;
+      height: 46px;
+      width: 256px;
+      position: relative;
+      opacity: 0.9;
+      box-shadow: 0px 0px 19px rgb(37, 37, 37);
+      left: 420px;
+      transition: all 0.7s;
+      border-radius: 200px;
+    }
+    .logo:hover
+    {
+      box-shadow: 0px 0px 30px #eeff00;
+      height: 50px;
+      width: 260px;
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    nav a.active {
+      color: var(--text-dark);
+      font-weight: 600;
+      position: relative;
+    }
+
+  
+
+    .contact-btn {
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+      border: none;
+      background: #111827;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .hero {
+      background: var(--bg-soft);
+      padding: 4rem 2.5rem 0;
+      text-align: center;
+    }
+
+    .heading1 {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .breadcrumb span {
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero h1 .highlight {
+      color: var(--primary);
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin: auto;
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 3rem;
+    }
+
+    .hero-image {
+      width: 100%;
+      border-radius: 24px 24px 0 0;
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      nav ul {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 3rem 1.5rem 0;
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     :root {
+      --primary: #0b5ed7;
+      --secondary: #f8f9fa;
+      --text-dark: #1f2937;
+      --text-muted: #6b7280;
+      --card-bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, rgb(245, 150, 7) 0%, rgb(255, 255, 255) 30%, green 40%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .defence-box {
+      width: 100%;
+      max-width: 1200px;
+      height: 2000px;
+      background: var(--secondary);
+      border-radius: 24px;
+      padding: 3rem;
+      overflow-y: auto;
+    }
+
+    .defence-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .defence-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+    }
+
+    .defence-header p {
+      max-width: 700px;
+      margin: auto;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .defence-cards {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      background: var(--card-bg);
+      width: 260px;
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: all 0.6s ease-in-out;
+    }
+
+    .card:hover {
+      transform: translateY(-18px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 12);
+    }
+
+    .card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+      color: var(--text-dark);
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+   
