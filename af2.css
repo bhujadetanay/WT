@@ -1,0 +1,78 @@
+:root {
+    --hud-cyan: #00f2ff;
+    --dark-void: #020508;
+    --dim-gray: #1a1e23;
+    --text-white: #e0e0e0;
+}
+
+body {
+    background-color: var(--dark-void);
+    color: var(--hud-cyan);
+    font-family: 'Space Mono', monospace;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Corner Frames */
+.hud-frame {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--hud-cyan);
+    z-index: 1000;
+}
+.top-left { top: 15px; left: 15px; border-right: 0; border-bottom: 0; }
+.top-right { top: 15px; right: 15px; border-left: 0; border-bottom: 0; }
+.bottom-left { bottom: 15px; left: 15px; border-right: 0; border-top: 0; }
+.bottom-right { bottom: 15px; right: 15px; border-left: 0; border-top: 0; }
+
+/* Header */
+.main-header {
+    text-align: center;
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(0, 242, 255, 0.2);
+}
+.header-logo { width: 60px; margin-bottom: 10px; }
+.glitch-title { font-size: 2.2rem; margin: 0; color: white; letter-spacing: 5px; }
+.pilot-callsign { font-size: 0.7rem; opacity: 0.8; margin-top: 5px; }
+
+/* Sections */
+.tactical-section { padding: 60px 5%; }
+.dark-alt { background-color: #050a0f; }
+.hud-title { font-size: 1rem; border: 1px solid var(--hud-cyan); padding: 5px 15px; display: inline-block; margin-bottom: 30px; background: rgba(0,242,255,0.05); }
+
+/* Jet Cards */
+.card-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+.jet-card { background: var(--dim-gray); width: 320px; border: 1px solid #333; position: relative; overflow: hidden; }
+.jet-card img { width: 100%; height: 180px; object-fit: cover; opacity: 0.8; }
+.jet-info { padding: 20px; }
+.jet-info h3 { margin: 0 0 10px; color: white; }
+.jet-info p { font-size: 0.85rem; color: var(--text-white); margin-bottom: 15px; }
+.spec { font-size: 0.7rem; color: var(--hud-cyan); border: 1px solid var(--hud-cyan); padding: 2px 8px; }
+
+/* Radar Grid */
+.base-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.base-box { border: 1px solid #222; padding: 25px; background: rgba(0, 242, 255, 0.03); border-left: 4px solid var(--hud-cyan); }
+.base-box h4 { color: white; margin-top: 0; margin-bottom: 10px; }
+
+/* Ranks List */
+.rank-list { max-width: 600px; margin: 0 auto; }
+.rank-item { padding: 10px; border-bottom: 1px solid #111; font-size: 0.9rem; color: var(--text-white); }
+.rank-item span { color: var(--hud-cyan); margin-right: 15px; font-weight: bold; }
+
+/* Mission Log */
+.mission-log { background: #000; padding: 25px; border: 1px dashed var(--hud-cyan); }
+.log-entry { margin-bottom: 15px; font-size: 0.9rem; color: var(--text-white); }
+.year { color: var(--hud-cyan); font-weight: bold; margin-right: 10px; }
+
+/* Scanner Bar Animation */
+.scanner-bar {
+    width: 100%; height: 2px; background: var(--hud-cyan);
+    position: absolute; top: 0; z-index: 5;
+    animation: scan-move 4s linear infinite;
+    box-shadow: 0 0 10px var(--hud-cyan);
+}
+@keyframes scan-move { 0% { top: 0; } 100% { top: 180px; } }
+
+footer { text-align: center; padding: 40px; font-size: 0.7rem; color: #444; border-top: 1px solid #111; }
