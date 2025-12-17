@@ -1,136 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Pride</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="homee.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRDO | National Defence Portal</title>
+    <link rel="stylesheet" href="homee.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll('nav a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        console.log('Navigation clicked');
-      });
-    });
-
-    // Add animation on card hover
-    const cards = document.querySelectorAll('.card');
-    cards.forEach(card => {
-      card.addEventListener('mouseenter', function () {
-        this.style.transform = 'translateY(-10px)';
-      });
-      card.addEventListener('mouseleave', function () {
-        this.style.transform = 'translateY(0)';
-      });
-    });
-
-    console.log('Page loaded successfully');
-  });
-</script>
-
 <body>
 
-  <div class="maindiv">
+    <div class="main-container">
+        <header>
+            <div class="logo-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCz8TpM2zVJRs0E0wFuj-ZmBsvqp6DOTbWJg&s" alt="DRDO Official Logo" class="drdo-logo">
+                <div class="logo-text">
+                    <span class="org-name">DRDO</span>
+                    <span class="org-sub">Ministry of Defence</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#divisions">Divisions</a></li>
+                    <li><a href="#missions">Strategic Missions</a></li>
+                    <li><a href="#labs">Research Labs</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <header>
-      <div class="logo">
-        <span class="logos"><img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Armed_forces_logo.svg/2048px-Armed_forces_logo.svg.png"
-            alt="Indian Defence Force Logo" style="width: 45px; height: 45px;"></span> Indian Defence
-        Force
-      </div>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="top-tag">GOVERNMENT OF INDIA</div>
+                <h1>Strength's Origin is in <span class="accent">Science</span></h1>
+                <p class="motto">"Balasya Mulam Vijnanam"</p>
+                <p class="description">
+                    The Defence Research and Development Organisation (DRDO) is the technical arm of the Ministry of Defence. 
+                    We design, develop, and lead India toward self-reliance in defense technology.
+                </p>
+                <div class="hero-btns">
+                    <button class="btn-primary">View Projects</button>
+                    <button class="btn-secondary">Annual Report</button>
+                </div>
+            </div>
+        </section>
 
-      <nav>
-        <ul>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#" class="active"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-        </ul>
-      </nav>
+        <section id="divisions" class="content-section">
+            <h2 class="section-title">Strategic Operations</h2>
+            <div class="card-grid">
+                
+                <div class="card">
+                    <div class="card-overlay"></div>
+                    <div class="icon">🚀</div>
+                    <h3>Missile Systems</h3>
+                    <p>Development of Agni and Akash series for strategic deterrence and air defense.</p>
+                </div>
 
-    </header>
+                <div class="card">
+                    <div class="card-overlay"></div>
+                    <div class="icon">🛡️</div>
+                    <h3>Armament & Combat</h3>
+                    <p>Creating the Arjun Main Battle Tank and advanced ballistic protection for soldiers.</p>
+                </div>
 
-    <section class="hero">
-      <div class="heading1"><span></span></div>
+                <div class="card">
+                    <div class="card-overlay"></div>
+                    <div class="icon">🛰️</div>
+                    <h3>Electronics & Radar</h3>
+                    <p>Advanced surveillance systems like Netra (AEW&C) to monitor national borders.</p>
+                </div>
 
-      <h1>
-        Sewa Paramo Dharma <br>
-        <span class="highlight"></span>
-      </h1>
+                <div class="card">
+                    <div class="card-overlay"></div>
+                    <div class="icon">🤖</div>
+                    <h3>Robotics & AI</h3>
+                    <p>Autonomous vehicles like Daksh for bomb disposal and remote operations.</p>
+                </div>
+            </div>
+        </section>
 
-      <p>
-        Service before self : The ultimate motto of Indian Defence force
-      </p>
+        <section id="labs" class="info-block">
+            <div class="info-text">
+                <h2>The Research Ecosystem</h2>
+                <p>DRDO is not just one office; it is a network of <strong>52 laboratories</strong> working across different disciplines including aeronautics, armaments, electronics, land fighting engineering, life sciences, materials, missiles, and naval systems.</p>
+                <div class="stats-row">
+                    <div class="stat"><span>5,000+</span><br>Scientists</div>
+                    <div class="stat"><span>25,000+</span><br>Technical Staff</div>
+                    <div class="stat"><span>100%</span><br>Dedication</div>
+                </div>
+            </div>
+            <div class="info-image">
+                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600" alt="Laboratory">
+            </div>
+        </section>
 
-      <section class="defence-box">
+        <section class="history-section">
+            <h2 class="section-title">Leadership & Heritage</h2>
+            <div class="history-content">
+                <div class="history-item">
+                    <h3>Established 1958</h3>
+                    <p>Formed by the amalgamation of the Technical Development Establishment and the Directorate of Technical Development & Production.</p>
+                </div>
+                <div class="history-item">
+                    <h3>Dr. APJ Abdul Kalam</h3>
+                    <p>The "Missile Man of India" led DRDO to major successes in the Integrated Guided Missile Development Programme (IGMDP).</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="defence-header">
-          <h1>Indian Defence Forces</h1>
-          <p>
-            The Indian Defence system safeguards the nation through land, sea, air,
-            and intelligence operations. Explore the core pillars that ensure
-            national security and strategic strength.
-          </p>
-        </div>
-
-        <div class="defence-cards">
-
-          <a href="Navy.html" class="card">
-            <div class="card-icon">⚓</div>
-            <h3>Indian Navy</h3>
-            <p>
-              Protects India's maritime borders and secures national interests in
-              the Indian Ocean Region.
-            </p>
-          </a>
-
-          <a href="af1.html" class="card">
-            <div class="card-icon">✈️</div>
-            <h3>Indian Air Force</h3>
-            <p>
-              Controls airspace, delivers rapid response, and provides aerial
-              superiority during conflicts.
-            </p>
-          </a>
-
-          <a href="Indian_Army.html" class="card">
-            <div class="card-icon">🪖</div>
-            <h3>Indian Army</h3>
-            <p>
-              Defends the nation on land, conducts counter-terrorism operations,
-              and ensures border security.
-            </p>
-          </a>
-
-          <a href="intilligence.html" class="card">
-            <div class="card-icon">🕵️‍♂️</div>
-            <h3>Intelligence Agencies</h3>
-            <p>
-              Collects strategic intelligence to prevent threats and protect
-              national interests.
-            </p>
-          </a>
-
-        </div>
-
-      </section>
-    </section>
-
-  </div>
+        <footer>
+            <div class="footer-content">
+                <p>Class 1 Project: National Security Awareness</p>
+                <p>© 2024 Defence Research Portal | Classified Information Access Restricted</p>
+            </div>
+        </footer>
+    </div>
 
 </body>
-
 </html>

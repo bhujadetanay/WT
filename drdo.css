@@ -1,0 +1,138 @@
+:root {
+    --bg-color: #0d0d0d;
+    --text-color: #ffffff;
+    --dim-text: #a0a0a0;
+    --accent: #d4af37;
+    --border: #262626;
+}
+
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+}
+
+/* Sidebar Branding */
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    border-right: 1px solid var(--border);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.brand-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 50px;
+}
+
+.side-nav a {
+    display: block;
+    color: var(--dim-text);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+    margin-top: 60px;
+}
+
+.side-nav a:hover { color: var(--accent); }
+
+/* Main Content Wrapper */
+.content-wrapper {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+}
+
+/* Hero Section */
+.hero-minimal {
+    padding: 100px 8%;
+    border-bottom: 1px solid var(--border);
+}
+
+.header-line { width: 40px; height: 2px; background: var(--accent); margin-bottom: 20px; }
+.agency-tag { font-size: 0.7rem; letter-spacing: 4px; color: var(--accent); margin: 0; }
+h1 { font-size: 5rem; margin: 10px 0; font-weight: 700; }
+.thin { font-weight: 300; opacity: 0.6; }
+.motto-formal { color: var(--dim-text); font-size: 1.1rem; }
+
+/* Grid & Images */
+.pro-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.pro-card {
+    border-left: 1px solid var(--border);
+    padding-left: 25px;
+}
+
+.card-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    filter: grayscale(1); /* High-tech monochrome look */
+    transition: filter 0.5s ease;
+}
+
+.pro-card:hover .card-img {
+    filter: grayscale(0); /* Fades into color on hover */
+}
+
+.card-category { font-size: 0.65rem; color: var(--accent); letter-spacing: 2px; }
+.pro-card h3 { font-size: 1.3rem; margin: 10px 0; }
+.pro-card p { color: var(--dim-text); font-size: 0.9rem; }
+
+/* Beta Section Images */
+.beta-hero-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 40px;
+    border: 1px solid var(--border);
+}
+
+.beta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    padding: 30px 0;
+}
+
+.beta-detail-box {
+    border: 1px solid var(--border);
+    padding: 10px 20px;
+    font-size: 0.7rem;
+    color: var(--accent);
+}
+
+/* Lab Cards */
+.main-section { padding: 100px 8%; }
+.bg-alt { background-color: #121212; }
+.section-num { font-size: 0.8rem; color: var(--accent); margin-bottom: 50px; }
+
+.lab-visual { display: flex; gap: 20px; }
+.lab-card {
+    flex: 1;
+    background: #1a1a1a;
+    padding: 40px;
+    border: 1px solid var(--border);
+}
+
+.minimal-footer {
+    padding: 50px 8%;
+    font-size: 0.7rem;
+    color: var(--dim-text);
+}
